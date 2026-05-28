@@ -1,0 +1,46 @@
+{
+  "name": "browser-panel",
+  "displayName": "Browser Panel",
+  "version": "0.1.0",
+  "description": "Adds the integrated browser side panel and browser search commands.",
+  "entry": "index.py",
+  "permissions": [
+    "network",
+    "ui.sidebar",
+    "ui.toolbar",
+    "commands",
+    "editor.read"
+  ],
+  "contributes": {
+    "uiPanels": [
+      {
+        "id": "browser-panel.panel",
+        "title": "Browser",
+        "type": "python"
+      }
+    ],
+    "commands": [
+      {
+        "id": "browser-panel.open",
+        "title": "Open Browser Panel",
+        "panel": "browser-panel.panel"
+      }
+    ],
+    "toolbarActions": [
+      {
+        "id": "browser-panel.toolbar",
+        "title": "Browser",
+        "tooltip": "Open Browser Panel",
+        "icon": "browser",
+        "panel": "browser-panel.panel"
+      }
+    ],
+    "sidebarItems": [
+      {
+        "id": "browser-panel.sidebar",
+        "title": "Browser",
+        "panel": "browser-panel.panel"
+      }
+    ]
+  }
+}
